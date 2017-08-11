@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bose.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+</head>
+<body>
+    <audio src="music/牛奶咖啡 - 遇见你.mp3" id='audio'></audio>
+    <div class="music">
+        <div class="nav">
+            <div class="logo"></div>
+            <div class="nav-list">
+                <a href="javascript:;" class="active">首页</a>
+                <a href="javascript:;">我的音乐</a>
+                <a href="javascript:;">发现音乐</a>
+                <a href="javascript:;">音乐排行版</a>
+            </div>
+            <div class="find">
+                <input type="text" placeholder="搜索">
+                <a href="javascript:;" class="icon">&#xe603;</a>
+            </div>
+        </div>
+        <div class="body">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/back1.jpg" alt="加载失败"></div>
+                    <div class="swiper-slide"><img src="img/back2.jpg" alt="加载失败"></div>
+                    <div class="swiper-slide"><img src="img/back3.jpg" alt="加载失败"></div>
+                    <div class="swiper-slide"><img src="img/back4.jpg" alt="加载失败"></div>
+                    <div class="swiper-slide"><img src="img/back5.jpg" alt="加载失败"></div>
+                    <div class="music-back">
+                        <canvas id="canvas" width="800px" height="300px"></canvas>
+                    </div>
+                    <div class="shade"></div>
+                    <ul class="music-word"></ul>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-white"><a href="javascript:;">&gt;</a></div>
+                <div class="swiper-button-prev swiper-button-white"><a href="javascript:;">&lt;</a></div>
+            </div>
+            <!--我的音乐-->
+            <div class="my-music">
+                <ul class="mm-list">
+                    <li class="active"><a href="javascript:;" >正在播放</a></li>
+                    <li><a href="javascript:;">播放历史</a></li>
+                    <li><a href="javascript:;">我收藏的单曲</a></li>
+                    <li><a href="javascript:;">我创建的歌单</a></li>
+                </ul>
+                <div class="mm-content">
+                    <div class="mm-now zindex">
+                        <ul class="now-list">
+                            <li class="now-nav">
+                                <span>歌曲</span>
+                                <span>歌手</span>
+                                <span>专辑</span>
+                                <span>时长</span>
+                            </li>
+                        </ul>
+                        <div class="now-song">
+                            <div class="song-img" style="background-size: cover"></div>
+                            <ul class="song-word"></ul>
+                        </div>
+                    </div>
+                    <div class="mm-last">
+                        <ul class="now-list">
+                            <li class="now-nav">
+                                <span>歌曲</span>
+                                <span>歌手</span>
+                                <span>专辑</span>
+                                <span>时长</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mm-love">
+                        <ul class="now-list">
+                            <li class="now-nav">
+                                <span>歌曲</span>
+                                <span>歌手</span>
+                                <span>专辑</span>
+                                <span>时长</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mm-creat"></div>
+                </div>
+            </div>
+            <!--发现音乐-->
+            <div class="my-find">
+                <div id="dowebok">
+                    <div class="singer section">
+                        <div class="find-nav">
+                            <div class="line"></div>
+                            <span>热门歌手</span>
+                            <div class="line"></div>
+                        </div>
+                        <ul class="singer-list">
+                            <li>
+                                <img src="img/singer-1.png" alt="加载失败">
+                                <div class="shadow"></div>
+                                <div class="introduce">
+                                    <p>薛之谦</p>
+                                    <p>代表作：红豆</p>
+                                    <p>
+                                        <span>2407229</span>
+                                        <span>2426083</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/singer-2.jpg" alt="加载失败">
+                                <div class="shadow"></div>
+                                <div class="introduce">
+                                    <p>庄心妍</p>
+                                    <p>代表作：一万个舍不得</p>
+                                    <p>
+                                        <span>1396758</span>
+                                        <span>1438751</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/singer-3.png" alt="加载失败">
+                                <div class="shadow"></div>
+                                <div class="introduce">
+                                    <p>Lana Del Rey</p>
+                                    <p>代表作：Young and Beautiful</p>
+                                    <p>
+                                        <span>24443</span>
+                                        <span>30249</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/singer-4.png" alt="加载失败">
+                                <div class="shadow"></div>
+                                <div class="introduce">
+                                    <p>周杰伦</p>
+                                    <p>代表作：东风破</p>
+                                    <p>
+                                        <span>1683897</span>
+                                        <span>1650906</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/singer-5.jpg" alt="加载失败">
+                                <div class="shadow"></div>
+                                <div class="introduce">
+                                    <p>王俊凯</p>
+                                    <p>代表作：树读</p>
+                                    <p>
+                                        <span>97420</span>
+                                        <span>97482</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="song-sheet section">
+                        <div class="find-nav">
+                            <div class="line"></div>
+                            <span>热门歌单</span>
+                            <div class="line"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="javascript:;"><img src="img/sheet-1.jpg" alt="加载失败"></a>
+                                <p>每日最新单曲</p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/sheet-2.jpg" alt="加载失败"></a>
+                                <p>热门单曲</p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/sheet-3.jpg" alt="加载失败"></a>
+                                <p>最新90后单曲</p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/sheet-4.jpg" alt="加载失败"></a>
+                                <p>最新欧美单曲</p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/sheet-5.jpg" alt="加载失败"></a>
+                                <p>校园歌曲</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="radio section">
+                        <div class="find-nav">
+                            <div class="line"></div>
+                            <span>热门电台</span>
+                            <div class="line"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-1.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">猜你喜欢</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-2.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">每日热歌</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-3.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">KTV必点曲</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-4.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">网络红歌</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-5.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">中文DJ</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-6.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">中午经典</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-7.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">百听不厌英文曲</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-8.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">伤感网络情歌</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-9.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">那些年MP3里的歌</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-10.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">最爱成名曲</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-11.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">安静</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-12.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">一个人</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-13.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">学习</a></p>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="img/redio-14.jpg" alt="加载失败"></a>
+                                <p><a href="javascript:;">咖啡厅</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="recommend section">
+                        <div class="find-nav">
+                            <div class="line"></div>
+                            <span>精彩推荐</span>
+                            <div class="line"></div>
+                        </div>
+                        <div class="box swiper-container1">
+                            <div class="img swiper-wrapper">
+                                <img  class="swiper-slide" src="img/recom-1.jpg" alt="" />
+                                <img  class="swiper-slide" src="img/recom-2.jpg" alt="" />
+                                <img  class="swiper-slide" src="img/recom-3.jpg" alt="" />
+                                <img  class="swiper-slide" src="img/recom-4.jpg" alt="" />
+                                <img  class="swiper-slide" src="img/recom-5.jpg" alt="" />
+                                <img  class="swiper-slide" src="img/recom-6.jpg" alt="" />
+                                <img  class="swiper-slide" src="img/recom-7.jpg" alt="" />
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!--左右按钮-->
+                            <div class="swiper-button-next">&gt;</div>
+                            <div class="swiper-button-prev">&lt;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--音乐排行版-->
+            <div class="rank">
+                <ul>
+                    <li>
+                        <div class="rank-play icon">&#xe7bf;</div>
+                        <div class="rank-word">
+                            <h2><a href="javascript:;">巅峰榜</a></h2>
+                            <h1><a href="javascript:;">流行指数</a></h1>
+                            <ul>
+                                <li>
+                                    <p><a href="javascript:;">1. 暧昧</a></p>
+                                    <p><a href="javascript:;">薛之谦</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">2. 凉凉(Live)</a></p>
+                                    <p><a href="javascript:;">张碧晨/杨宗纬</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">3. Good Life</a></p>
+                                    <p><a href="javascript:;">G-Eazy/Kehlani</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">4. 王子公主 (Live)</a></p>
+                                    <p><a href="javascript:;">薛之谦</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rank-play icon">&#xe7bf;</div>
+                        <div class="rank-word">
+                            <h2><a href="javascript:;">巅峰榜</a></h2>
+                            <h1><a href="javascript:;">热歌</a></h1>
+                            <ul>
+                                <li>
+                                    <p><a href="javascript:;">1. 暧昧</a></p>
+                                    <p><a href="javascript:;">薛之谦</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">2. 凉凉(Live)</a></p>
+                                    <p><a href="javascript:;">张碧晨/杨宗纬</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">3. 动物世界</a></p>
+                                    <p><a href="javascript:;">薛之谦</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">4.告白气球</a></p>
+                                    <p><a href="javascript:;">周杰伦</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rank-play icon">&#xe7bf;</div>
+                        <div class="rank-word">
+                            <h2><a href="javascript:;">巅峰榜</a></h2>
+                            <h1><a href="javascript:;">新歌</a></h1>
+                            <ul>
+                                <li>
+                                    <p><a href="javascript:;">1. 暧昧</a></p>
+                                    <p><a href="javascript:;">薛之谦</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">2. Good Life</a></p>
+                                    <p><a href="javascript:;">G-Eazy/Kehlani</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">3.星辰</a></p>
+                                    <p><a href="javascript:;">张杰</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">4. Go Off</a></p>
+                                    <p><a href="javascript:;">Lil Uzi Vert/Quavo/Travis </a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rank-play icon">&#xe7bf;</div>
+                        <div class="rank-word">
+                            <h2><a href="javascript:;">巅峰榜</a></h2>
+                            <h1><a href="javascript:;">欧美</a></h1>
+                            <ul>
+                                <li>
+                                    <p><a href="javascript:;">1. Ignite (Instrumental)</a></p>
+                                    <p><a href="javascript:;">Alan Walker/K-391</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">2.Naked</a></p>
+                                    <p><a href="javascript:;">Christopher</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">3.Heatstroke</a></p>
+                                    <p><a href="javascript:;">Calvin Harris/Young Thug/Pharrell Williams/Ariana Grande</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="javascript:;">4. 漂流爱情</a></p>
+                                    <p><a href="javascript:;">Michael Learns To Rock/</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="button">
+                <a href="javascript:;" class="icon c-last">&#xe644;</a>
+                <a href="javascript:;" class="icon c-play">&#xe7bf;</a>
+                <a href="javascript:;" class="icon c-next">&#xe600;</a>
+            </div>
+            <div class="play">
+                <div class="small-img">
+                    <a href="javascript:;"><div class="music-lyrics"></div></a>
+                </div>
+                <div class="schedule">
+                    <div class="music-name">牛奶咖啡-遇见你</div>
+                    <div class="now-time">0:00</div>
+                    <span>/</span>
+                    <div class="last-time">0:00</div>
+                    <div class="huanchong"></div>
+                    <div class="jindu"></div>
+                    <div class="cilcre"><a href="javascript:;"></a></div>
+                </div>
+            </div>
+            <div class="function">
+                <a href="javascript:;" class="icon">&#xe776;</a>
+                <a href="javascript:;" class="icon collect">&#xe649;</a>
+                <a href="javascript:;" class="icon loop" id="all-loop" title="列表循环">&#xe642;</a>
+                <a href="javascript:;" class="icon">&#xe602;</a>
+                <a href="javascript:;" class="icon download">&#xe606;</a>
+                <div class="voice-height">
+                    <div class="voice-size"></div>
+                    <div class="voice-jindu"></div>
+                </div>
+            </div>
+        </div>
+        <div class="play-list">
+            <div class="last">
+                <div class="last-nav">历史记录</div>
+                <ul class="last-content">
+                    <li class="last-mnav">
+                        <span><a href="javascript:;">歌曲</a></span>
+                        <span><a href="javascript:;">时长</a></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="next">
+                <div class="next-nav">播放列表</div>
+                <ul class="next-content">
+                    <li class="list-nav">
+                        <span><a href="javascript:;">状态</a></span>
+                        <span><a href="javascript:;">歌曲名</a></span>
+                        <span><a href="javascript:;">歌手</a></span>
+                        <span><a href="javascript:;">专辑</a></span>
+                        <span><a href="javascript:;">删除</a></span>
+                    </li>
+                </ul>
+                <div class="close"><a href="javascript:;">×</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        effect: 'fade',
+        autoplay:3000,
+        loop:true,
+    });
+</script>
+<script>
+    var swiper1 = new Swiper('.swiper-container1', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+        autoplay: 1600,
+        loop : true,
+        autoplayDisableOnInteraction : false,
+        coverflow: {
+            rotate: 0,
+            translateX:10,
+            stretch: 0,
+            depth: 100,
+            modifier: 0,
+            slideShadows : false
+        }
+    });
+</script>
+<script src="js/main.js"></script>

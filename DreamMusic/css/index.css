@@ -1,0 +1,1194 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url("../icon/iconfont.eot");
+    src: url("../icon/iconfont.eot?#iefix") format("embedded-opentype"), url("../icon/iconfont.woff") format("woff"), url("../icon/iconfont.ttf") format("truetype"), url("../icon/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+    font-family: 'iconfont';
+    font-size: 16px;
+    color: #B3B3B3;
+}
+
+.music {
+    width: 1366px;
+    height: 662px;
+    margin: 0 auto;
+}
+
+.nav {
+    width: 100%;
+    height: 8%;
+    padding: 0 100px;
+    background: #181818;
+    position: relative;
+}
+
+.nav .logo {
+    width: 180px;
+    height: 100%;
+    float: left;
+    background: url("../img/logo.png") no-repeat;
+}
+
+.swiper-container {
+    height: 93%;
+}
+
+.nav .nav-list {
+    width: auto;
+    height: 100%;
+    float: left;
+    line-height: 53px;
+    text-align: center;
+}
+
+.nav .nav-list a {
+    display: block;
+    padding: 0 36px;
+    float: left;
+    color: #fff;
+}
+
+.nav .nav-list .active {
+    color: #FECA2E;
+}
+
+.nav .find {
+    width: 400px;
+    height: 30px;
+    margin-top: 11px;
+    margin-right: 200px;
+    float: right;
+    position: relative;
+}
+
+.nav .find input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-indent: 2em;
+    outline: none;
+    background: #333;
+    color: #989898;
+}
+
+.nav .find a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.body {
+    width: 100%;
+    height: 83%;
+    position: relative;
+}
+
+.body .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.body .swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.body .shade {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0.5;
+    z-index: 999;
+}
+
+.body .swiper-button-next, .body .swiper-button-prev {
+    width: 80px;
+    height: 220px;
+    position: absolute;
+    top: 50%;
+    margin-top: -110px;
+    background: #000;
+    color: #8B8E91;
+    opacity: 0;
+    line-height: 220px;
+    text-align: center;
+    font-size: 60px;
+    font-family: '宋体';
+}
+
+.body .swiper-button-next a, .body .swiper-button-prev a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.body .swiper-button-next:hover a, .body .swiper-button-prev:hover a {
+    color: #DBD6D3;
+}
+
+.body .swiper-button-next {
+    right: 0;
+}
+
+.body .swiper-button-next:hover {
+    opacity: 0.4;
+}
+
+.body .swiper-button-prev {
+    left: 0;
+}
+
+.body .swiper-button-prev:hover {
+    opacity: 0.4;
+}
+
+.music-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../img/big-1.jpg") no-repeat;
+    background-size: cover !important;
+    background-position: center, center !important;
+    z-index: 99;
+    display: none;
+}
+
+.music-back #canvas {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.music-word {
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
+    overflow: hidden;
+    display: none;
+}
+
+.music-word li {
+    width: 100%;
+    height: 10%;
+    color: #fff;
+    line-height: 25px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.music-word .active {
+    font-size: 20px;
+    color: #FFCD2D;
+}
+
+.my-music {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+    display: none;
+}
+
+.mm-list {
+    width: 250px;
+    height: 100%;
+    float: left;
+    padding: 10px 0;
+}
+
+.mm-list li {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    font-size: 12px;
+    text-indent: 2em;
+}
+
+.mm-list li:nth-child(3) {
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+.mm-list .active {
+    background: #f0f0f0;
+}
+
+.mm-content {
+    width: 1116px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.mm-content .mm-now, .mm-content .mm-last, .mm-content .mm-love {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mm-content .mm-now .now-list, .mm-content .mm-last .now-list, .mm-content .mm-love .now-list {
+    width: 836px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
+.mm-content .mm-now .now-list li, .mm-content .mm-last .now-list li, .mm-content .mm-love .now-list li {
+    width: 100%;
+    height: 42px;
+    border-bottom: 1px solid #ebebeb;
+    line-height: 42px;
+}
+
+.mm-content .mm-now .now-list li:first-child, .mm-content .mm-last .now-list li:first-child, .mm-content .mm-love .now-list li:first-child {
+    border-bottom: 1px solid #cccccc;
+}
+
+.mm-content .mm-now .now-list li a, .mm-content .mm-last .now-list li a, .mm-content .mm-love .now-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.mm-content .mm-now .now-list .active, .mm-content .mm-last .now-list .active, .mm-content .mm-love .now-list .active {
+    background: #F0F0F0;
+}
+
+.mm-content .mm-now .now-list .active a, .mm-content .mm-last .now-list .active a, .mm-content .mm-love .now-list .active a {
+    color: #FFCD2D;
+}
+
+.mm-content .mm-now .now-list span, .mm-content .mm-last .now-list span, .mm-content .mm-love .now-list span {
+    display: block;
+    width: 25%;
+    height: 100%;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    color: #adadad;
+}
+
+.mm-content .mm-now .now-song, .mm-content .mm-last .now-song, .mm-content .mm-love .now-song {
+    width: 280px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mm-content .mm-now .now-song .song-img, .mm-content .mm-last .now-song .song-img, .mm-content .mm-love .now-song .song-img {
+    width: 186px;
+    height: 186px;
+    background: url("../img/img-1.jpg") no-repeat;
+    margin: 22px auto;
+}
+
+.mm-content .mm-now .now-song .song-word, .mm-content .mm-last .now-song .song-word, .mm-content .mm-love .now-song .song-word {
+    width: 186px;
+    height: 280px;
+    margin: 22px auto;
+    overflow: hidden;
+}
+
+.mm-content .mm-now .now-song .song-word li, .mm-content .mm-last .now-song .song-word li, .mm-content .mm-love .now-song .song-word li {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.mm-content .mm-now .now-song .song-word .active, .mm-content .mm-last .now-song .song-word .active, .mm-content .mm-love .now-song .song-word .active {
+    color: #FFCD2D;
+}
+
+.mm-content .zindex {
+    z-index: 99;
+}
+
+.my-find {
+    width: 100%;
+    height: 100%;
+    padding: 0 80px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+    overflow: hidden;
+    display: none;
+}
+
+.my-find #dowebok .fp-tableCell {
+    vertical-align: inherit;
+}
+
+.my-find .find-nav {
+    width: 540px;
+    height: 130px;
+    margin: 0 auto;
+    line-height: 130px;
+    overflow: hidden;
+}
+
+.my-find .find-nav .line {
+    width: 80px;
+    height: 1px;
+    background: #e6e6e6;
+    margin-top: 65px;
+    float: left;
+}
+
+.my-find .find-nav span {
+    display: block;
+    width: 366px;
+    height: 100%;
+    float: left;
+    padding: 0 76px;
+    font-size: 46px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.my-find .singer {
+    width: 100%;
+    height: 100%;
+}
+
+.my-find .singer .singer-list {
+    width: 100%;
+    height: 419px;
+}
+
+.my-find .singer .singer-list li {
+    width: 222px;
+    height: 362px;
+    border: 1px solid #EAEAE8;
+    box-sizing: border-box;
+    margin-right: 24px;
+    float: left;
+    position: relative;
+}
+
+.my-find .singer .singer-list li:last-child {
+    margin: 0;
+}
+
+.my-find .singer .singer-list li .shadow {
+    width: 100%;
+    height: 86px;
+    background: #000;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.my-find .singer .singer-list li .introduce {
+    width: 100%;
+    height: 86px;
+    padding: 16px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.my-find .singer .singer-list li .introduce p {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.my-find .singer .singer-list li .introduce a {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.my-find .singer .singer-list li .introduce .all {
+    width: 184px;
+    height: 36px;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+    border-radius: 19px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 10px auto;
+}
+
+.my-find .singer .singer-list li .introduce .all a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.my-find .song-sheet {
+    width: 100%;
+    height: 100%;
+}
+
+.my-find .song-sheet ul {
+    width: 100%;
+    height: 419px;
+    margin-top: 40px;
+}
+
+.my-find .song-sheet ul li {
+    width: 222px;
+    height: 362px;
+    margin-right: 24px;
+    float: left;
+    position: relative;
+}
+
+.my-find .song-sheet ul li:last-child {
+    margin: 0;
+}
+
+.my-find .song-sheet ul li img {
+    width: 222px;
+    height: 222px;
+}
+
+.my-find .song-sheet ul li p {
+    width: 100%;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.my-find .radio {
+    width: 100%;
+    height: 100%;
+}
+
+.my-find .radio ul {
+    width: 100%;
+    height: 419px;
+}
+
+.my-find .radio ul li {
+    width: 136px;
+    height: 209px;
+    margin-right: 40px;
+    float: left;
+}
+
+.my-find .radio ul li:nth-child(7), .my-find .radio ul li:nth-child(14) {
+    margin: 0;
+}
+
+.my-find .radio ul li > a {
+    display: block;
+    width: 136px;
+    height: 136px;
+    background: yellow;
+}
+
+.my-find .radio ul li > a img {
+    width: 100%;
+    height: 100%;
+}
+
+.my-find .radio ul li p {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.my-find .radio ul li p a {
+    color: #666;
+}
+
+.my-find .radio ul li p a:hover {
+    color: #288FE7;
+}
+
+.my-find .recommend {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.my-find .recommend .box {
+    width: 1200px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 33px;
+    overflow: hidden;
+}
+
+.my-find .recommend .box .img {
+    width: 1000%;
+}
+
+.my-find .recommend .box .img img {
+    width: 600px;
+    height: 240px;
+    float: left;
+    position: relative;
+    transition: transform .5s !important;
+}
+
+.my-find .recommend .first {
+    transition: transform .5s !important;
+    transform: scale(1.2) !important;
+    z-index: 999 !important;
+}
+
+.my-find .recommend .swiper-pagination-bullets {
+    width: 1200px;
+    height: 21px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-find .recommend .swiper-pagination-bullets span {
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: blue;
+    margin-right: 10px;
+}
+
+.my-find .recommend .swiper-pagination-bullet-active {
+    background: yellow !important;
+}
+
+.my-find .recommend .swiper-button-next {
+    width: 72px;
+    height: 107px;
+    background: #ccc;
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+    position: absolute;
+    right: -10px;
+    top: 100px;
+    transition: background-color .5s, width .5s;
+}
+
+.my-find .recommend .swiper-button-next:hover,
+.my-find .recommend .swiper-button-prev:hover {
+    background: #31C27C;
+    width: 78px;
+}
+
+.my-find .recommend .swiper-button-prev {
+    width: 72px;
+    height: 107px;
+    background: #ccc;
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+    position: absolute;
+    left: -10px;
+    top: 100px;
+    transition: background-color .5s, width .5s;
+}
+
+/***********动画*************/
+.animation .right-out {
+    animation: right-out 0.5s linear forwards;
+}
+
+.animation .right-out-out {
+    animation: right-out-out 0.5s linear forwards;
+}
+
+.animation .right-in {
+    animation: right-in 0.5s linear forwards;
+}
+
+@keyframes right-out {
+    0% {
+        transform: translateX(0) scale(1.2);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@keyframes right-out-out {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@keyframes right-in {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    100% {
+        transform: translateX(-50%) scale(1.2);
+    }
+}
+
+.animation .left-out {
+    animation: left-out 0.5s linear forwards;
+}
+
+.animation .left-out-out {
+    animation: left-out-out 0.5s linear forwards;
+}
+
+.animation .left-in {
+    animation: left-in 0.5s linear forwards;
+}
+
+@keyframes left-out {
+    0% {
+        transform: translateX(0) scale(1.2);
+    }
+    100% {
+        transform: translateX(50%) scale(1);
+    }
+}
+
+@keyframes left-out-out {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    100% {
+        transform: translateX(50%) scale(1);
+    }
+}
+
+@keyframes left-in {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    100% {
+        transform: translateX(50%) scale(1.2);
+    }
+}
+
+/**************************************/
+.rank {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #0f0f0f;
+    z-index: 999;
+    display: none;
+}
+
+.rank > ul {
+    width: 1200px;
+    height: 550px;
+    margin: 0 auto;
+}
+
+.rank > ul > li {
+    width: 25%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.rank > ul > li:nth-child(1) {
+    background: url(../img/rank.jpg) no-repeat 0 0;
+}
+
+.rank > ul > li:nth-child(2) {
+    background: url(../img/rank.jpg) no-repeat -300px 0;
+}
+
+.rank > ul > li:nth-child(3) {
+    background: url(../img/rank.jpg) no-repeat -600px 0;
+}
+
+.rank > ul > li:nth-child(4) {
+    background: url(../img/rank.jpg) no-repeat -900px 0;
+}
+
+.rank > ul > li .rank-play {
+    width: 66px;
+    height: 66px;
+    background: #F2F2F2;
+    position: absolute;
+    left: 120px;
+    top: 178px;
+    text-align: center;
+    line-height: 66px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+.rank > ul > li .rank-word {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 80px 60px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.rank > ul > li .rank-word h2 {
+    font-weight: normal;
+}
+
+.rank > ul > li .rank-word h2 a {
+    color: #fff;
+}
+
+.rank > ul > li .rank-word h1 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.rank > ul > li .rank-word h1 a {
+    color: #fff;
+}
+
+.rank > ul > li .rank-word ul {
+    width: 100%;
+    height: 240px;
+    margin-top: 100px;
+}
+
+.rank > ul > li .rank-word ul li {
+    width: 100%;
+    height: 25%;
+    text-align: left;
+}
+
+.rank > ul > li .rank-word ul li p {
+    width: 100%;
+    height: 50%;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.rank > ul > li .rank-word ul li p:nth-child(1) {
+    font-size: 14px;
+}
+
+.rank > ul > li .rank-word ul li p:nth-child(1) a {
+    color: #fff;
+}
+
+.rank > ul > li .rank-word ul li p:nth-child(2) {
+    font-size: 12px;
+    text-indent: 1em;
+}
+
+.rank > ul > li .rank-word ul li p:nth-child(2) a {
+    color: #CEE0DB;
+}
+
+.foot {
+    width: 100%;
+    height: 9%;
+    background: #030202;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+.foot .button {
+    width: 180px;
+    height: 100%;
+    float: left;
+}
+
+.foot .button a {
+    display: block;
+    width: 20%;
+    height: 100%;
+    float: left;
+    line-height: 64px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.foot .button a:nth-child(2) {
+    width: 40%;
+    font-size: 40px;
+    line-height: 70px;
+}
+
+.foot .button a:hover {
+    color: #fff;
+}
+
+.foot .play {
+    width: 580px;
+    height: 100%;
+    float: left;
+}
+
+.foot .play .small-img {
+    width: 42px;
+    height: 42px;
+    margin: 11px;
+    float: left;
+    background: url("../img/big-1.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.foot .play .small-img .music-lyrics {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.foot .play .schedule {
+    width: 442px;
+    height: 5px;
+    background: #262626;
+    margin-top: 40px;
+    border-radius: 2px;
+    float: left;
+    position: relative;
+}
+
+.foot .play .schedule .music-name {
+    width: 200px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    position: absolute;
+    left: 20px;
+    top: -25px;
+}
+
+.foot .play .schedule .now-time, .foot .play .schedule .last-time {
+    width: 40px;
+    height: 18px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    top: -25px;
+    left: 360px;
+}
+
+.foot .play .schedule span {
+    position: absolute;
+    top: -25px;
+    left: 390px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.foot .play .schedule .last-time {
+    top: -25px;
+    left: 402px;
+}
+
+.foot .play .schedule .huanchong {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #B3B3B3;
+}
+
+.foot .play .schedule .jindu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #FFCD2D;
+}
+
+.foot .play .schedule .cilcre {
+    width: 12px;
+    height: 12px;
+    background: #FFCD2D;
+    border-radius: 6px;
+    position: absolute;
+    left: -1.2%;
+    top: -3px;
+}
+
+.foot .play .schedule .cilcre a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.foot .function {
+    width: 400px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.foot .function a {
+    display: block;
+    width: 20%;
+    height: 100%;
+    float: left;
+    line-height: 64px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.foot .function a:hover {
+    color: #fff;
+}
+
+.foot .function .voice-height {
+    position: absolute;
+    z-index: 999;
+    width: 8px;
+    height: 80px;
+    border-radius: 4px;
+    background: red;
+    bottom: 50px;
+    left: 40px;
+    margin-left: -5px;
+    display: none;
+}
+
+.foot .function .voice-height .voice-size {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.foot .function .voice-height .voice-jindu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    border-radius: 5px;
+    background: yellow;
+}
+
+.play-list {
+    width: 1200px;
+    height: 306px;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    bottom: 60px;
+    background: #141414;
+    z-index: 999;
+    display: none;
+}
+
+.play-list .last {
+    width: 492px;
+    height: 100%;
+    background: #151515;
+    float: left;
+}
+
+.play-list .last .last-nav {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.play-list .last .last-content {
+    width: 100%;
+    height: 256px;
+    background: #1f1f1f;
+    overflow: auto;
+}
+
+.play-list .last .last-content li {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+.play-list .last .last-content li span {
+    display: block;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.play-list .last .last-content li span a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.play-list .last .last-content li span:first-child {
+    width: 60%;
+}
+
+.play-list .last .last-content li span:last-child {
+    width: 40%;
+}
+
+.play-list .next {
+    width: 700px;
+    height: 100%;
+    background: #151515;
+    float: right;
+    position: relative;
+}
+
+.play-list .next .next-nav {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.play-list .next .next-content {
+    width: 100%;
+    height: 256px;
+    background: #1f1f1f;
+    overflow: auto;
+}
+
+.play-list .next .next-content li {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fff;
+}
+
+.play-list .next .next-content li span {
+    display: block;
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+}
+
+.play-list .next .next-content li span a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.play-list .next .next-content .active span a {
+    color: #FFCD2D;
+}
+
+.play-list .next .close {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.play-list .next .close a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #999;
+}
